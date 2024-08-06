@@ -46,6 +46,9 @@ TEST_MODE=$(grep -w "UpdateType" ${PROP_FILE} | cut -d'=' -f2)
 if [[ ${PRODUCT_NAME} == "wso2am" ]];
 then
     INFRA_JSON=$INPUTS_DIR/../../scripts/apim/intg/infra.json
+elif [[ ${PRODUCT_NAME} == "wso2mi" ]];
+then
+    INFRA_JSON=$INPUTS_DIR/../../scripts/mi/intg/infra.json
 else
     INFRA_JSON=$INPUTS_DIR/../../scripts/${PRODUCT_NAME}/intg/infra.json
 fi
