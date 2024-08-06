@@ -72,6 +72,9 @@ function cloudformationDeployment(){
         if [[ ${product} == "wso2am" ]];
         then
             bash ${currentScript}/apim/intg/intg-deploy.sh ${deploymentName} ${cloudformationFileLocations[@]}
+        elif [[ ${product} == "wso2mi" ]];
+        then
+            bash ${currentScript}/mi/intg/intg-deploy.sh ${deploymentName} ${cloudformationFileLocations[@]}
         else
             bash ${currentScript}/${product}/intg/intg-deploy.sh ${deploymentName} ${cloudformationFileLocations[@]}
         fi
